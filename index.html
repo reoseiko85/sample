@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+     <meta charset="utf-8">
+     <title>My First Page</title>
+     
+
+ </head>
+ <body> 
+
+ 	<header>
+
+ 		<h1 id="Top"><b>Setting up a C++ competitive programming environment for Sublime Text on Windows</b></h1>
+
+     <h2><b>Contents</b></h2>
+
+     <nav>
+     	<a href="#Install">1.Install</a>
+     	<br>
+     	<a href="#Install Sublime">2.Install Sublime Text</a>
+     	<br>
+
+     	<a href="#Create Build">3.Create A Build System</a>
+     	<br>
+
+     	<a href="#Setup Window">4.Setup Window Layout</a>
+     	<br>
+
+     	<a href="#Precompile">5.Precompile Headers</a>
+     	<br>
+
+     	<h3 style="font-size:22px"><b>Sublime Text features</b></h3>
+
+     	<a href="#Snippets">1.Snippets </a>
+     	<br>
+     	<a href="#Completions">2.Completions</a>
+     	<br>
+     </nav>
+
+
+ 	</header>
+
+
+    
+
+ 	<main>
+ 		<h2><b>About Competitve Programming:-</b></h2>
+          <strong><em>When we are participating in a programming contest, our aim is to be as quick and as efficient as possible. However, often the tools we use during contests are clunky, non-intuitive and impede our speed. The following post will help you set up Sublime Text in a way that leads to a good workflow - from reading the problem statement to submitting the solution.</em></strong>
+
+
+ 	</main>
+
+ 	<h1>Setting up the Environment</h1>
+
+
+  <section>
+  	<div id="Install">
+  	  <h1 style="font-size:25px">1.Install</h1>
+
+ 	  
+ 		<p>	MinGW is a native Windows port of the GNU Compiler Collection (GCC). Install the latest MinGW compiler, 	after downloading from here.
+		Your path should preferably be C:\MinGW. Finally, add the bin directory, C:\MinGW\bin to the System PATH.
+        </p>
+
+
+ 	</div> 
+
+
+
+ 	<div id="Install Sublime">
+ 		<h1 style="font-size:25px">2.Install Sublime Text</h1>
+
+
+  
+
+  	<p>
+  		Halo Infinite is being developed by 343 Industries using the new Slipspace Engine. The story entered planning stages in 2015.[18] An announcement trailer was released on June 10, 2018.[19] The developer said that all of the scenes in the Halo Infinite trailer were running in the engine.[20][21][22] Halo Infinite will feature split-screen again, in response to the backlash of its removal in the previous game.[23] It was also planned to have a beta prior to its release, described as an insider flight program.[2]
+   	</p>
+	</div>
+
+  <div id="Create Build">
+  	<h1 style="font-size:25px">3.Create A Build System</h1>
+      <p>
+  
+
+				Sublime Text provides build systems to allow users to run external programs. Create a new build system for Sublime Text for setting up C++ compilation.
+				Go to Tools > Build System > New Build System. Paste the following code in the file and save it.
+  	   </p>
+
+
+
+
+  	   <p>
+  	   	This can be used for piping input from the inputf.in file, and output to the outputf.in file. Note that this uses the -std=c++17 flag to enable the latest features of C++17. If you don't want this or want to use C++14, replace this with the -std=c++14 flag.
+  	   </p>
+   
+        
+
+
+  </div>
+
+
+
+  <div id="Setup Window">
+  	<h1 style="font-size:25px">4.Setup Window Layout</h1>
+
+  	<p>
+  		Create three new files, <b>file.cpp</b>, <b>inputf.in</b>, and <b>outputf.in</b>. <b>Select View > Layout > Columns : 3</b>. This will create three columns in the workspace. Move the three files into the three columns.  <b>Select View > Groups >Max Columns:2</b>.
+  	</p>
+  	<br>
+
+  	<img src="img/layout.png"
+  	     alt="layout"
+  	     height="600px"
+  	     width="1500px">
+
+
+
+
+  	<p>
+  		The windows will look like above when you are done. Write a hello world program, and test its working. Use <b>Ctrl+B</b> to build and execute the file.
+  	</p>
+  </div>
+
+
+  <div id="Precompile">
+  	<h1 style="font-size:25px">5.Precompile Headers</h1>
+
+  	<p>
+  		Now we can speed up compilation time by precompiling all the header files as mentioned here, i.e. by precompiling the bits/stdc++.h header file. This can speed up compilation time by up to a factor of 12.
+		For this, first, navigate to the stdc++.h file. This will be located at a directory similar to <b>C:\MinGW\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits</b>. Right click while pressing Shift to open a Powershell/cmd window there. Run the command <b>g++ -std=c++17 stdc++.h</b>, to compile the header. Take care to use the same flags you used in your build system. Check to make sure that the <b>stdc++.h.gch </b>file was created in the directory.
+
+		Finally, we can take advantage of the features of Sublime Text, namely snippets and completions.
+   </p>
+  </div>
+
+
+
+</section>
+
+
+<article>
+
+	<h1 style="font-size:30px"><strong>Sublime Text Features</strong></h1>
+
+	
+	<div id="Snippets">
+		<h1 style="font-size:25px">1.Snippets</h1>
+
+		<img src="img/snippet.png"
+		 alt="snippet"
+		 height="300px"
+		 width="800px"
+		 >
+
+		<p>
+		Snippets are smart templates that will insert text for you and adapt it to their context. Read up on the documentation of snippets at the official guide. You can create snippets like the following to quickly insert snippets of code into your file.
+	</p>
+
+</div>
+
+<div id="Completions">
+	<h1 style="font-size:25px"><strong>2.Completions</strong></h1>
+
+	<img src="img/completion.png"
+		alt="completion"
+		height="300px"
+		width="800px">
+	<p>
+		Sublime Text suggests completions that aggregate code or content while writing by catching everything that you have written, like variable names. Read up on the documentation of completions at the official guide. You can create completions like the following to quickly enter common phrases into your file.
+	</p>
+
+
+
+	
+
+		<img src="img/completion1.png"
+		alt="completion"
+		height="900px"
+		width="800px">
+
+
+
+
+
+    <p>
+    	This provides an experience close to code completion, with the advantage that you can customize it to phrases you frequently type.
+
+		You can create snippet or completion files by putting the corresponding code in a .sublime-snippet or .sublime-completions file.
+
+		So that's the basics out of the way, you can now begin coding. You can also explore various other features present in Sublime text, especially its plugin functionality and the most common plugins. You can also install themes to change the look and feel of the windows. There are other features that you may want to use so I’ve provided some 
+		<a href="https://scotch.io/bar-talk/best-of-sublime-text-3-features-plugins-and-settings" target="_blank">further reading</a>.
+
+	   <h2>Video Link</h2>
+	   <a href="https://www.youtube.com/watch?v=Mt6Jb8u9XBk&t=456s"target="_blank"><strong>How to set up Sublime Text for Competitive Coding?</strong></a>
+
+	   <br>
+
+        <a href="video.html" target="_blank">Google Coding Interview</a>
+    </p>
+
+
+
+ </div>
+
+	</article>
+
+
+
+
+    <a href="#Top"><b>Back to top</b></a>
+
+<!--footer part-->
+  <hr style="height:2px;background-color:purple">
+
+    <footer>
+
+
+
+     <p>
+       <a href="https://learn.shayhowe.com/html-css/getting-to-know-html/" target="_blank">
+
+     		<img src="img/html icon.jpg"
+     		alt="html icon"
+     		width="2%"
+     		/><figcaption>(Html)</figcaption>
+        </a>
+
+        <br>
+        <br>
+
+       
+
+
+        <a href="https://validator.w3.org/" target="_blank">
+
+ 		<img src="img/cheat icon.png"
+ 		  alt="icon"
+ 		  width="5%">
+ 		 <figcaption>Validator</figcaption>
+      </a>
+
+      <br>
+
+      <a href="http://wave.webaim.org/" target="_blank">
+      	<img src="img/wave.png"
+      	      alt="wave"
+      	      width="3%"/>
+      	     <figcaption>Web Accesbility Tool</figcaption>
+       </a>
+
+    </p>
+
+
+
+
+
+
+     <button onclick="document.location='https://www.w3schools.com/html/html_links.asp'">HTML tutorial</button>
+  
+
+     <p>&copy;This is my first document</p>
+    </footer>
+
+
+ </body>
+ </html>
